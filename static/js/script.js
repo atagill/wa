@@ -57,8 +57,8 @@ function uploadFiles(event) {
                 setFile({ 'chat': response.chat, 'users': response.users })
                 download_link.show();
 
-                console.log("Chat Block count:" + response.chat.length);
-                console.log("Users count:" + response.users.length);
+                console.log("Chat Block count::" + response.chat.length);
+                console.log("Users count::" + response.users.length);
                 var last_user_index = -1;
                 for (var chat_index in response.chat) {
                     var chat_div_id = "chatBox" + chat_index,
@@ -75,7 +75,7 @@ function uploadFiles(event) {
                     }
 
                     $("div.text", "#" + chat_div_id).text(response.chat[chat_index].p);
-                    $("div.time", "#" + chat_div_id).text(response.chat[chat_index].t+"XTXT");
+                    $("div.time", "#" + chat_div_id).text("55"); //response.chat[chat_index].t+"XTXT"
                     last_user_index = chat_user_index;
                 }
             } else {
