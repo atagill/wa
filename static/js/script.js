@@ -75,7 +75,7 @@ function uploadFiles(event) {
                     }
 
                     $("div.text", "#" + chat_div_id).text(response.chat[chat_index].p);
-                    $("div.time", "#" + chat_div_id).text(response.chat[chat_index].t);
+                    $("div.time", "#" + chat_div_id).text(response.chat[chat_index].t.replace("GMT", ""));
                     last_user_index = chat_user_index;
                 }
             } else {
