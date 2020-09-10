@@ -59,7 +59,7 @@ def get_parsed_file(filepath):
     with open(filepath, "r", encoding='utf-8') as f:
         for line in f:
             try:
-                parsed_line, persons_list = _get_parsed_line(line.strip(), persons_list)
+                parsed_line, persons_list = _get_parsed_line(line.strip().replace("GMT", ""), persons_list)
                 if parsed_line:
                     parsed_chats.append(parsed_line)
             except IndexError:
