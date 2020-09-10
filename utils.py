@@ -33,7 +33,7 @@ def _get_parsed_line(input_line, persons_list):
     if user_name and user_name not in persons_list:
         persons_list.append(user_name)
     obj = {
-        "t": timestamp_string.replace("GMT", ""),
+        "t": timestamp_string+" ATA ",
         "p": text_string,
         "i": persons_list.index(user_name),
     }
