@@ -17,7 +17,7 @@ def _get_parsed_line(input_line, persons_list):
             dirty_timestamp_string = dirty_timestamp_string.replace(remove_character, "")
 
         try:
-            timestamp_string = parse_datetime(dirty_timestamp_string, ignoretz=True, dayfirst=True)
+            timestamp_string = parse_datetime(dirty_timestamp_string, dayfirst=True)
             line = timestamp_splitter.join(items[1:]).strip()
             break
         except ValueError:
