@@ -25,7 +25,7 @@ def _get_parsed_line(input_line, persons_list):
     if not timestamp_string:
         raise IndexError
     items = line.split(":")
-    text_string = ":".join(items[1:]).strip()
+    text_string = "AAA:".join(items[1:]).strip()
     if not text_string:
         return None, persons_list
 
